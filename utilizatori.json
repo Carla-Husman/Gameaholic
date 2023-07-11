@@ -1,0 +1,22 @@
+{
+    "utilizatori": [
+        {
+            "utilizator": "test",
+            "parola": "test",
+            "nume": "Husman",
+            "prenume": "Carla"
+        },
+        {
+            "utilizator": "carla",
+            "parola": "carla",
+            "nume": "Husman",
+            "prenume": "Gabriela"
+        },
+        {
+            "utilizator": "admin",
+            "parola": "admin",
+            "nume": "Admin",
+            "prenume": "Admin"
+        }
+    ]
+}

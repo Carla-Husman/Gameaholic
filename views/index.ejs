@@ -1,0 +1,50 @@
+<section class="imagine-main">
+</section>
+
+<section>
+    <!--<% if (utilizatorAutentificat !=null ){ %>
+        <h2 style="color:chocolate; text-shadow: 1px 1px 1px black;"> Bine ai venit, <%= utilizatorAutentificat['nume']%>
+                <%= utilizatorAutentificat['prenume'] %>! &emsp14;&emsp14;&emsp14;&emsp14;
+    <% } %>   -->
+    
+    <button class="buttonBazaDeDate" style="margin-right: 20px;" id="creareBD" onclick="window.location.href = '/creare-bd'">Creare BD</button>
+    <button class="buttonBazaDeDate" style="width: 100px;" id="inserareBD" onclick="window.location.href = '/inserare-bd'">Încărcare BD</button>
+    
+    <br />
+    <hr />
+    <br />
+
+    <% if (listaProduse.length !=0){ %>
+        <h1 style="color:white; text-shadow: 1px 1px 1px black;">Bestsellers</h1>
+
+        <div class="album">
+            <% listaProduse.forEach((product, index)=> { %>
+                <div class="product">
+                    <img src="Imagini/produse/<%= product.img_src %>"
+                        style="width: 470px; height: 300px;" />
+                    <section style="display: flex;">
+
+                        <!--Se afiseaza butonul de adauga doar daca utilizatorul este autentificat-->
+                        <% if (utilizatorAutentificat !=null ){ %>
+                            <form method="POST" action="/adaugare-cos">
+                                <input type="hidden" name="id_produs" value="<%= product.nume_produs%>"/>
+                                <button class="buttonRezultat" style="margin-right: 90px;">Adaugă în coș</button>
+                            </form>
+                        <% } %> 
+                        
+                        <h4 style="margin-right: 50px;">
+                            <%= product.nume_produs %>  
+                        </h4>
+                        <h4 style="color:chocolate">
+                            <%= product.pret %> $
+                        </h4>                                       
+                    </section>
+                </div>
+                <% if ((index + 1) % 3===0) { %>
+        </div>
+        <div class="album">
+            <% } %>
+                <% }); %>
+        </div>
+        <% } %>                    
+</section>

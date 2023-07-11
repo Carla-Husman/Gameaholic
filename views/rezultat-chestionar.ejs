@@ -1,0 +1,18 @@
+<section style="display:flex; justify-content: center; margin-top: 85px;">
+    <article style="padding-top: 160px;">
+        <h1 style="font-size: 30px; color: chocolate">Rezultat Chestionar</h1>
+        <p style="font-size: 20px;">Rezultatul dvs. este: </p>
+        <p style="font-size: 20px;"><%= rezultat %> răspunsuri corecte/ <%= punctajTotal %></p>
+    </article>
+    <article style="margin-left:120px;">
+        <%if (rezultat >= 4) { %>
+            <figure>
+                <img src="Imagini/chestionar/trecut.png" style="width: 840px; height: 540px;"/>
+            </figure>
+        <% }else{ %>
+            <figure>
+                <img src="Imagini/chestionar/picat.jpg" style="width: 840px; height: 540px;"/>
+            </figure>
+        <% } %>
+    </article>
+</section>

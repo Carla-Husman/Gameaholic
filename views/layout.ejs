@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <title>Gameaholic</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="CSS/stil.css" />
+</head>
+
+<body>
+  <header class="header-container">
+    <a class="logo" href="/"></a>
+    <div class="menu">
+        <% if(utilizatorAutentificat == null || utilizatorAutentificat['utilizator'] != "admin") { %>
+          <a href="/">Acasă</a>
+          <a href="/chestionar">Chestionar</a>
+        <% }%>
+    </div>
+    <div class="header-right">
+      <% if(utilizatorAutentificat != null) { %>
+        <h2 style="color:chocolate; text-shadow: 1px 1px 1px black;font-size: 10px; margin-top: 16px;"> Bine ai venit, <%= utilizatorAutentificat['nume']%>
+          <%= utilizatorAutentificat['prenume'] %>! &emsp14;&emsp14;&emsp14;&emsp14;</h2>
+        <!--Dupa apasarea pe Logout, redirectionez catre pagina de autentificare unde se va sterge userul curent conectat-->
+        <% if(utilizatorAutentificat == null || utilizatorAutentificat['utilizator'] != "admin") { %>
+            <a class="cos" href="/vizualizare-cos"></a>
+        <% }%>
+        <a class="logout" href="/autentificare"></a>
+      <% } else if (utilizatorAutentificat == null) { %>
+        <a class="login" href="/autentificare"></a>
+      <% }%>
+      
+    </div>
+  </header>
+
+  <main id="continut">
+    <%- body -%>
+  </main>
+
+  <footer>
+    <hr/>
+    &#169; 2023 Gameaholic
+  </footer>
+</body>
+
+</html>

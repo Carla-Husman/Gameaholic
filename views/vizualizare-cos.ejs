@@ -1,0 +1,58 @@
+<section style="margin-top: 80px;">
+    <% if (produseDinCos.length!=0){ %>
+        <section style="display: flex; ">
+            <article class="cosPlin" >
+                <h1 style="margin-left: 140px; font-size: 20px;">Coșul de cumpărături</h1>
+                <hr style="background-color:chocolate; border: none; height: 1px;"/>
+            <% let suma = 0 %>
+            <% produseDinCos.forEach(function(produs){ %>
+                <% suma += parseInt(produs.pret) * produs.nr_produse%>
+                <hr style="background-color:chocolate; border: none; height: 1px;"/>
+                <div style="display:flex">
+                    <div style="margin-left: 60px;">
+                        <img src="Imagini/produse/<%= produs.img_src %>"
+                            style="width: 170px; height: 100px;" />
+                    </div>
+                    <div style="margin-left: 30px;">
+                        <%= produs.nume_produs %>
+                        <div style="margin-top: 68px;">
+                            Număr de produse: <%= produs.nr_produse %>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>       
+            </article>
+
+            <article class="sumar">
+                <h1 style="margin-left: 170px; font-size: 20px;">Sumarul comenzii</h1>
+                <hr style="background-color:chocolate; border: none; height: 1px;"/>
+                <hr style="background-color:chocolate; border: none; height: 1px;"/>
+                <div style="margin-left: 140px; margin-top: 25px;">
+                    <p style="font-size: 20px; color: grey;">
+                        Prețul comenzii: <span style="margin-left: 40px;"><%=suma%> $</span>
+                    </p>
+                    <p style="font-size: 20px; color: grey"> 
+                        Transport: <span style="margin-left: 104px;">5 $</span>
+                    </p>
+                    <br/>
+                    <strong>
+                        <p style="font-size: 30px;">
+                            Total: <span style="margin-left: 82px;"><%=suma + 5%> $</span>
+                        </p>
+                    </strong>
+                </div>    
+            </article>
+        </section>
+        <% if(produseDinCos.length == 1 || produseDinCos.length == 2){ %>
+            <br/><br/><br/><br/><br/>
+        <% } %> 
+        <br/>
+    <% } else { %>
+        <section class="cosGol">
+            <br/><br/>
+            <p class="cosGol-text">Coșul tău de cumpărături este gol.</p>
+            <br/>
+            <p class="cosGol-subtext">Nu ai adăugat încă niciun produs în coșul de cumpărături. Navighează pe site pentru a descoperi oferte incredibile!</p>
+        </section>
+    <% }%>
+</section>

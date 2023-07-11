@@ -1,0 +1,26 @@
+<section style="display:flex; justify-content: center; margin-bottom: -19px;">
+    <article style="padding-top: 145px;">
+        <div style="font-size: 23px;">
+            Log in
+        </div>
+        <br/><br/>
+        <hr/>
+        <br/><br/>
+        <form method="POST" action="/verificare-autentificare">
+            <label for="numeUtilizator" style="font-size: 23px;">Utilizator:</label><br>
+            <input class="inputInregistrare" type="text" id="numeUtilizator" name="numeUtilizator"/><br><br>
+
+            <label for="parola" style="font-size: 23px;">Parolă:</label><br>
+            <input class="inputInregistrare" type="password" id="parola" name="parola"/><br><br><br/>
+    
+            <input class="buttonInregistrare" type="submit" value="Autentificare"/>
+        </form>
+        <p style="color:tomato; "><%= mesajEroare %></p>
+    </article>
+
+    <article style="padding-left: 150px;">
+        <figure>
+            <img src="Imagini/fundal/inregistrare.jpg" style="width:800px; height: 700px; margin-right: -200px;"/>
+        </figure>
+    </article>
+</section>

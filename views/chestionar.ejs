@@ -1,0 +1,44 @@
+<section style="display:flex; margin-top: 30px; justify-content: center;">
+    <article>
+        <article style="width: 700px; justify-content: center; text-align: justify;">
+            <h1 style="font-size: 40px; color: chocolate; padding-left: 70px;">QUIZul final al jocurilor video</h1>
+            <h1 style="font-size: 15px;">
+                &emsp14;&emsp14; Ești un virtuoz al jocurilor video sau un maestru software? Pune-ți cunoștințele de gaming la încercare
+                cu acest quiz!
+            </h1>
+            <h1>&emsp14;&emsp14;Toată lumea iubește jocurile video, nu-i așa? Dar una este să fii un jucător priceput și alta să cunoști
+                cu adevărat industria jocurilor. Gaming-ul este o afacere uriașă, cu o istorie îndelungată în întreaga lume
+                și o mulțime de invenții uimitoare de-a lungul timpului. De exemplu, care este cel mai bine vândut joc pentru
+                Playstation din toate timpurile? Care a fost inspirația din spatele jocului Pokemon? Da, va trebui să
+                fii un adevărat jucător hardcore pentru a obține 100% la acest quiz despre jocuri video!</h1>
+            <h1>&emsp14;&emsp14;Ești gata? Este timpul să-ți testezi cunoștințele generale!</h1>
+        </article>
+
+        <article style="width: 700px; justify-content: center; text-align: justify;">
+            <form action="/rezultat-chestionar" method="post" role="form">
+                <% intrebari.forEach(function(intrebare, idIntrebare){ %>
+                        <figure>
+                            <img src="Imagini/chestionar/<%= idIntrebare + 1 %>.jpg" style="width:500px; height: 300px;"/>
+                        </figure>
+                        <h2>
+                            <%= intrebare.intrebare %>
+                        </h2>
+                        <% intrebare.variante.forEach(function(varianta, idVarianta){ %>
+                            <input name="varianta<%= idIntrebare %>" value="<%= idVarianta %>" type="radio" />
+                            <%= varianta %><br />
+                                <% }); %>
+                                    <% }); %><br />
+                                        <br />
+                    <input class="buttonRezultat" type="submit" value="Rezultat" />
+            </form>
+            <br />
+        </article>
+    </article>
+    <article style="margin-top: 40px;">
+        <% for (var i = 0; i < 12; i++) { %>
+            <figure>
+                <img src="Imagini/fundal/chestionar.jpg" style="width: 400px;"/>
+            </figure>
+          <% } %>
+    </article>
+</section>

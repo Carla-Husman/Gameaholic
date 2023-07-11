@@ -1,0 +1,76 @@
+{
+    "intrebari": [
+        {
+            "intrebare": "Ce l-a inspirat pe dezvoltatorul de jocuri Satoshi Tajiri să creeze Pokemon?",
+            "variante": [
+                "Un vis",
+                "Fluturii",
+                "Un show de televiziune vechi",
+                "Mama lui"
+            ],
+            "corect": 1
+        },
+        {
+            "intrebare": "Care este numele acestui caracter?",
+            "variante": [
+                "Bomberman",
+                "Marvin The Martin",
+                "Ben Folds",
+                "Sir Michael Redgrave"
+            ],
+            "corect": 0
+        },
+        {
+            "intrebare": "Care este cel mai vândut video game?",
+            "variante": [
+                "Red Dead Redemption 2",
+                "FIFA 18",
+                "Minecraft",
+                "Call of Duty: Modern Warfare 3"
+            ],
+            "corect": 2
+        },
+        {
+            "intrebare": "Cand a fost Playstation 5 publicat?",
+            "variante": [
+                "Ianuarie 2020",
+                "Noiembrie 2020",
+                "Ianuarie 2021",
+                "Iunie 2020"
+            ],
+            "corect": 1
+        },
+        {
+            "intrebare": "Cum se numește vehiculul blindat din jocul Halo?",
+            "variante": [
+                "Sir Killalot",
+                "Bashor",
+                "Rocksteady",
+                "Warthog"
+            ],
+            "corect": 3
+        },
+
+        {
+            "intrebare": "Care este limba fictionala din Sims?",
+            "variante": [
+                "Simian",
+                "Simlish",
+                "Simali",
+                "Simento"
+            ],
+            "corect": 1
+        },
+
+        {
+            "intrebare": "Cât de multe console Playstation 4 s-au vândut?",
+            "variante": [
+                "5 milioane",
+                "56 milioane",
+                "62.5 milioane",
+                "peste 102 milioane"
+            ],
+            "corect": 3
+        }
+    ]
+}

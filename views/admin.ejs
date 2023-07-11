@@ -1,0 +1,28 @@
+<section>
+    <article style="margin-top: 85px;">
+        <div style="display: flex;">
+            <!--<h2 style="color:chocolate; text-shadow: 1px 1px 1px black;"> Bine ai venit, <%= utilizatorAutentificat['nume']%>!<h2>-->
+            <button class="buttonBazaDeDate" style="margin-right: 20px;margin-left: 20px;" id="creareBD" onclick="window.location.href = '/creare-bd'">Creare BD</button>
+            <button class="buttonBazaDeDate" style="width: 100px;" id="inserareBD" onclick="window.location.href = '/inserare-bd'">Încărcare BD</button>
+        </div>
+    </article>
+    <article>
+        <h1 style="font-size: 33px; margin-left: 590px;"> Adaugă un joc nou </h1>
+
+        <form method="POST" action="/verificare-adaugare-produs" style="margin-left: 550px;">
+            <label for="nume_produs" style="font-size: 23px;">Denumire joc: </label><br/>
+            <input class="inputInregistrare" type="text" id="nume_produs" name="nume_produs" /><br/><br/>
+
+            <label for="pret" style="font-size: 23px;">Preț produs: </label><br/>
+            <input class="inputInregistrare" type="number" min="0" id="pret" name="pret"/><br/><br/>
+
+            <label for="img_src" style="font-size: 23px;">Nume imagine: </label><br/>
+            <input class="inputInregistrare" type="text" id="img_src" name="img_src"/><br/><br/>
+
+            <input class="buttonInregistrare" type="submit" value="Adaugă joc"/>
+        </form>
+
+        <p style="margin-left: 550px;"><%= mesajEroare %></p>
+        <br/><br/><br/>
+    </article>
+</section>
